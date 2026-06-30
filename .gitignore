@@ -35,3 +35,20 @@ out/
 
 ### VS Code ###
 .vscode/
+
+# Ignore Environment Variables (Crucial for security)
+.env
+.env.local
+
+# Ignore IntelliJ IDEA project files
+.idea/
+*.iml
+out/
+
+# Ignore Build Directories
+/target/
+/build/
+
+# Ignore Log Files
+*.log
+

@@ -1,4 +1,13 @@
 package com.akash.aipm.dto.response;
 
-public class AuthResponse {
-}
+import lombok.Builder;
+
+
+@Builder
+public record AuthResponse (
+
+    String accessToken,
+    String tokenType,
+    long expiresIn,
+    UserResponse user
+){}

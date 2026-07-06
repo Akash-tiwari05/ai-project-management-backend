@@ -1,6 +1,7 @@
 package com.akash.aipm.entity;
 
 
+import com.akash.aipm.enums.MemberRole;
 import com.akash.aipm.enums.PlanType;
 import com.akash.aipm.enums.UserStatus;
 import jakarta.persistence.*;
@@ -26,6 +27,9 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 public class User extends BaseEntity{
 
+    @Column(nullable = false, length = 100)
+    private String name;
+
     @Column(nullable = false, length = 4)
     private String initials;
 
@@ -35,8 +39,9 @@ public class User extends BaseEntity{
     @Column(name = "password_hash", nullable = false, length = 255)
     private String passwordHash;
 
-    @Column(nullable = false, length = 50)
-    private String role = "member";
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private MemberRole role = MemberRole.MEMBER;
 
     @Column(name = "avatar_color", nullable = false, length = 7)
     private String avatarColor = "#3B82F6";

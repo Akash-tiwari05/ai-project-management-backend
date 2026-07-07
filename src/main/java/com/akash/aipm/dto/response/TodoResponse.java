@@ -1,5 +1,6 @@
 package com.akash.aipm.dto.response;
 
+import com.akash.aipm.enums.Priority;
 import lombok.Builder;
 
 import java.time.Instant;
@@ -11,7 +12,7 @@ public record TodoResponse(
         UUID id,
         String text,
         boolean done,
-        String priority,
+        Priority priority,
         LocalDate dueDate,
         int position,
         Instant completedAt,

@@ -1,5 +1,6 @@
 package com.akash.aipm.dto.response;
 
+import com.akash.aipm.enums.AiRole;
 import lombok.Builder;
 
 import java.time.Instant;
@@ -9,7 +10,7 @@ import java.util.UUID;
 public record AiMessageResponse(
         UUID id,
         String text,
-        String role,
+        AiRole role,
         String model,
         Integer promptTokens,
         Integer completionTokens,

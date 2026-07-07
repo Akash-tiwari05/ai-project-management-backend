@@ -1,5 +1,6 @@
 package com.akash.aipm.dto.request;
 
+import com.akash.aipm.enums.MessageType;
 import com.akash.aipm.enums.Priority;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -13,6 +14,8 @@ public record SendMessageRequest(
         @NotBlank(message = "Text is required")
         @Size(max = 1000, message = "Text cannot exceed 1000 characters")
         String text,
+
+        MessageType messageType,
 
         Boolean done,
 

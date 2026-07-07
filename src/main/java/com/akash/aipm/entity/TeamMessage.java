@@ -47,7 +47,7 @@ public class TeamMessage extends BaseEntity {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
-    private MessageType type = MessageType.TEXT;
+    private MessageType type;
 
     @JdbcTypeCode(SqlTypes.JSON)
     @Column(columnDefinition = "jsonb")

@@ -47,7 +47,7 @@ public class Todo extends BaseEntity {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 10)
-    private Priority priority = Priority.MEDIUM;
+    private Priority priority;
 
     @Column(name = "due_date")
     private LocalDate dueDate;
